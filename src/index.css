@@ -1,0 +1,384 @@
+/* src/index.css */
+/* From Uiverse.io by Gaurav-WebDev */ 
+.button {
+    height: 50px;
+    width: 300px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.5s ease-in-out;
+    /* margin-left: 505; */
+  }
+  
+  .button:hover {
+    box-shadow: .5px .5px 500px #252525;
+  }
+  
+  .type1::after {
+    content: "😋";
+    height: 50px;
+    width: 500px;
+    background-color: #008080;
+    color: #fff;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    transform: translateY(50px);
+    font-size: 1.2rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease-in-out;
+  }
+  
+  .type1::before {
+    content: "Discover Cuisine!";
+    height: 50px;
+    width: 300px;
+    background-color: #fff;
+    color: #008080;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    transform: translateY(0px) scale(1.2);
+    font-size: 1.2rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease-in-out;
+  }
+  
+  .type1:hover::after {
+    transform: translateY(0) scale(1.2);
+  }
+  
+  .type1:hover::before {
+    transform: translateY(-50px) scale(0) rotate(120deg);
+  }
+
+
+
+/* ------------------------- */
+.HeroesSection{  
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    /* margin: 5vw; */
+      margin: 7rem 5rem 0 20rem;
+      
+}
+
+.HeroesSectionImage{
+    filter: drop-shadow(2px 2px 20px black);
+    width: 400px;
+}
+
+.HeroesSectionHeadings{
+    margin-top: 5rem;
+}
+
+.typeNavbar{
+    display: flex;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(21, 74, 74);
+    height: 43px;
+    gap: 3rem;
+    width: 100%;
+    position: fixed;
+    top: 60px;
+    z-index:3;
+    opacity: 1;
+    
+
+}
+/* .navCategory{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    background-color: rgb(21, 74, 74);
+    height: 43px;
+    gap: 3rem;
+    width: 100%;
+    z-index: 2;
+   
+} */
+
+.navCategoryList{
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    gap: 2rem;
+    list-style: none;
+    color: #fff;
+    cursor: pointer;
+    z-index: 3;
+}
+
+/* .navCategoryList li{
+  height: 5px;
+ 
+} */
+
+.cuisineSelection{
+    margin-top: 3px;
+}
+
+.typeBarCont {
+    position: absolute;
+    right: 1vw;
+    top: 4vw;
+    flex-direction: column;
+    width: 300px;
+    padding: 2rem;
+   
+    border-radius: 31px;
+    background-color:rgba(21, 74, 74);
+    color: #fff;
+   background-color: #252525;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+
+    opacity: 0; /* Hidden by default */
+    transform: translateY(-50px); /* Positioned above */
+    pointer-events: none; /*Prevent interaction when hidden*/
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    z-index:2000; /* Ensures visibility */
+}
+
+/* Show animation */
+.typeBarCont.show {
+    opacity: 1;
+    transform: translateY(0);
+     pointer-events: auto; /*Allow interaction when visible */
+     z-index:2000;
+}
+
+
+.recipieCards{
+    margin: 5rem;
+}
+
+/* ingriedients */
+
+
+.instructions{
+    height: 250px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    padding: 0 3rem;
+    position: relative;
+}
+.instructions::-webkit-scrollbar{
+    width: 2px;
+    color: #9efaf3;
+}
+
+.instructionsLinks {
+    position: sticky;
+    top: 1rem; /* Adjust as needed for spacing */
+    padding: 1rem;
+    background-color: #9efaf3; /* Optional for visibility */
+
+  
+    margin: 0 2rem;
+
+    
+}
+
+.instructionsLinks a{
+    color: black;
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+.instructionsStepsdetails{
+    margin-left: 2rem;
+    width: 300px;
+}
+
+
+@media (min-width:200px) and (max-width:329px)
+{
+  .typeBarCont {
+    position: absolute;
+    left:1vw;
+    top: 200vw;
+   
+
+  }
+}
+
+@media (min-width:330px) and (max-width:450px)
+{
+  .typeBarCont {
+    position: absolute;
+    left:1vw;
+    top: 120vw;
+   
+
+  }
+}
+
+@media (min-width:450px) and (max-width:499px)
+{
+  .typeBarCont {
+    position: absolute;
+    right:1vw;
+    top: 90vw;
+   
+
+  }
+}
+
+@media (min-width:500px) and (max-width:599px)
+{
+  .typeBarCont {
+    position: absolute;
+    right:1vw;
+    top: 70vw;
+   
+
+  }
+}
+
+@media (min-width:600px) and (max-width:699px)
+{
+  .typeBarCont {
+    position: absolute;
+    right:1vw;
+    top: 55vw;
+   
+
+  }
+}
+
+@media (min-width:700px) and (max-width:819px)
+{
+  .typeBarCont {
+    position: absolute;
+    right:1vw;
+    top: 55vw;
+   
+
+  }
+}
+
+@media (min-width:800px) and (max-width:999px)
+{
+  .typeBarCont {
+    position: absolute;
+    right:1vw;
+    top: 35vw;
+   
+
+  }
+}
+
+@media (min-width:1000px) and (max-width:1250px)
+{
+  .typeBarCont {
+    position: absolute;
+    right:1vw;
+    top: 15vw;
+   
+
+  }
+}
+
+@media (min-width:1250px) and (max-width:1300px)
+{
+  .typeBarCont {
+    position: absolute;
+    right:1vw;
+    top: 10vw;
+   
+
+  }
+}
+
+
+@media (min-width:1301px) and (max-width:1499px)
+{
+  .typeBarCont {
+    position: absolute;
+ right:1vw;
+    top: 8vw;
+ 
+ 
+  }
+}
+
+
+@media (max-width:999px)
+{
+  .NavBar-Category{
+    margin-bottom: 30px;
+  }
+  .HeroesSection{  
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    margin: 10vw 25vw;
+      
+      
+}
+
+
+}
+
+@media (max-width:450px){
+  .HeroesSection{  
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    margin: 5vw 10vw;
+      
+      
+}
+.HeroesSectionImage{
+   
+  width:250px;
+}
+
+
+
+
+
+}
+
+@media (max-width:300px)
+{
+  .button {
+    height: 50px;
+    width: 200px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.5s ease-in-out;
+    /* margin-left: 505; */
+  }
+  .type1::before {
+    content: "Discover Cuisine!";
+    height: 50px;
+    width: 200px;
+    background-color: #fff;
+    color: #008080;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    transform: translateY(0px) scale(1.2);
+    font-size: 1.2rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease-in-out;
+  }
+}
